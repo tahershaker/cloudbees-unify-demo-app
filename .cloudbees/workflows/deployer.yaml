@@ -25,7 +25,7 @@ on:
 jobs:
   orders-api:
     if: ${{ fromJSON(inputs.manifest)['cloudbees-unify-demo-kit']['orders-api'].deploy }}
-    uses: cb-demos/cloudbees-unify-demo-kit/.cloudbees/workflows/deploy.yaml@main
+    uses: tahershaker/cloudbees-unify-demo-kit/.cloudbees/workflows/deploy.yaml@main
     with:
       artifact-id: ${{ fromJSON(inputs.manifest)['cloudbees-unify-demo-kit']['orders-api'].url }}
       environment: ${{ inputs.environment }}
